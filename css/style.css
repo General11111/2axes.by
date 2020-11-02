@@ -20,7 +20,8 @@ textarea:focus {
   outline: none;
 }
 header {
-  background: url(../img/bg.jpg) #ffcc00;
+  background: #ffffff url(../img/main-bg.jpg) no-repeat center center;
+  background-size: cover;
   min-height: 700px;
   height: 100vh;
 }
