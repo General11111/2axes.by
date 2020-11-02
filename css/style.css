@@ -20,7 +20,7 @@ textarea:focus {
   outline: none;
 }
 header {
-  background-image: linear-gradient(white, gray);
+  background: url(../img/bg.jpg) #ffcc00;
   min-height: 700px;
   height: 100vh;
 }
