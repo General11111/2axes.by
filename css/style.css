@@ -252,3 +252,49 @@ i.fa-camera-retro {
   -o-transform: rotate(-15deg);
   transform: rotate(-15deg);
 }
+/* Works section */
+.works-box {
+  height: 360px;
+  position: relative;
+}
+.signature {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.signature:hover {
+  opacity: 1;
+}
+.sign p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+.sign button {
+  border: none;
+  padding: 15px 35px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  background-color: #fc6744;
+}
+.works-row {
+  margin-top: 3%;
+}
