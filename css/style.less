@@ -18,6 +18,8 @@
 @bg-koire: #817eff;
 @bg-lara: #f74770;
 @bg-services-list: #fbfbfb;
+@yellow: #ffef3b;
+@grey: #adadad;
 /* Base settings */
 body{
 	font-size: 14px;
@@ -382,24 +384,82 @@ i.fa-camera-retro{
 		padding: 20px;
 		p{
 			font-size: 17px;
-			margin-top: 25px;
+			margin-top: 20px;
+			margin-bottom: 20px;
 			padding-left: 30px;
 			padding-right: 30px;
+			span{
+				.opn-bold;
+			}
 		}
 		img{
 			width: 128px;
 			height: 128px;
 		}
+		i.fa-star{
+			color: @yellow;
+		}
 	}
 	&-shadow{
 		padding: 10px;
 		padding-top: 64px;
-		box-shadow: 0px 0px 27px 0px rgba(20, 20, 21, 0.9);
+		box-shadow: 0px 0px 27px 0px rgba(20, 20, 21, 0.09);
 	}
 	&-img{
 		margin-bottom: -64px;
 	}
+	&-slider-arrows{
+		position: absolute;
+		top: 50%;
+		height: 50px;
+		width: 50px;
+		font-size: 18px;
+		z-index: 999;
+		-webkit-transform:translateY(-9px);
+		-ms-transform:translateY(-9px);
+		-o-transform:translateY(-9px);
+		transform:translateY(-9px);
+		box-shadow: 0px 3px 14px 0px rgba(20, 20, 21, 0.28);
+		padding: 16px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+		background-color: @white;
+		&:hover{
+			background-color: @base-red;
+			color: @white;
+			cursor: pointer;
+		}
+	}
 }
 .slick-active, .slick-slide{
 	outline: none;
+}
+.arrow-left{
+	left: 0;
+	padding-left: 17px;
+}
+.arrow-right{
+	right: 0;
+	padding-left: 21px;
+}
+.slick-dots li button:before{
+	width: 21px;
+	height: 7px;
+	color: transparent;
+	background-color: @grey;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+.slick-dots li.slick-active button:before{
+	color: transparent;
+	background-color: @base-red;
+}
+.slick-dots{
+	bottom: -50px;
 }
