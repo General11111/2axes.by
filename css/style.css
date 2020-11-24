@@ -486,10 +486,6 @@ footer {
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.popup-overlay:target {
-  display: block;
-  opacity: 1;
-}
 .popup-close {
   font-size: 30px;
   color: #706b73;
@@ -506,4 +502,12 @@ footer {
 .popup-close:active {
   text-decoration: none;
   color: #706b73;
+}
+#popup-1:target {
+  display: block;
+  opacity: 1;
+}
+#popup-2:target {
+  display: block;
+  opacity: 1;
 }
