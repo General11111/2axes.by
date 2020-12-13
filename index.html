@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="slick/slick-theme.css">
     <!-- Animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <!-- <link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -71,14 +72,14 @@
     <section id="process">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 section-header text-center animate__animated animate__tada">
+          <div class="col-lg-12 section-header text-center">
             <h2><span>Рабочий</span> процесс</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Dolorum, odio, maiores. Suscipit, autem, quas.</p>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="process-box box-tomi">
+            <div class="process-box wow fadeInLeft box-tomi" data-wow-delay="0.2s">
               <i class="fa fa-magnet"></i>
               <h4>
                 Koc Koi Tomi
@@ -88,7 +89,7 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="process-box box-koimona">
+            <div class="process-box wow fadeInLeft box-koimona" data-wow-delay="0.4s">
               <i class="fa fa-bug"></i>
               <h4>
                 Koimona Set
@@ -98,7 +99,7 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="process-box box-koire">
+            <div class="process-box wow fadeInLeft box-koire" data-wow-delay="0.6s">
               <i class="fa fa-cogs"></i>
               <h4>
                 Setting Koire
@@ -108,7 +109,7 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="process-box box-lara">
+            <div class="process-box wow fadeInLeft box-lara" data-wow-delay="0.8s">
               <i class="fa fa-camera-retro"></i>
               <h4>
                 Ko Image Lara
@@ -509,9 +510,14 @@
     <!-- Slick -->
     <script src="slick/slick.min.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- Animation -->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  
     <script>
       $(document).ready(function(){
         $('.feedback-slider').slick({
@@ -530,115 +536,115 @@
     <!-- Снежинки -->
     <script>
     ////////////////////////
-///////// Настройки
-////////////////////////
- 
-// количество снежинок, которое будет на экране одновременно.
-var snowmax=40
- 
-// Цвета для снежинок. Для каждой конкретной снежинки цвет выбирается случайно из этого массива.
-var snowcolor=new Array("#b9dff5","#7fc7ff","#7fb1ff","#7fc7ff","#b9dff5")
- 
-// Шрифт для снежинок
-var snowtype=new Array("Times")
- 
-// Символ (*) и есть снежинка, в место нее можно вставить любой другой символ.
-var snowletter="&#10052;"
- 
-// Скорость движения снежинок (от 0.3 до 2)
-var sinkspeed=0.4
- 
-// Максимальный размер для снежинок
-var snowmaxsize=40
- 
-// Минимальный размер для снежинок
-var snowminsize=10
- 
-// Зона для снежинок
-// 1 для всей страницы, 2 в левой части страницы
-// 3 в центральной части, 4 в правой части страницы
-var snowingzone=1
- 
-////////////////////////
-///////// Конец настроек
-////////////////////////
- 
-var snow=new Array()
-var marginbottom
-var marginright
-var timer
-var i_snow=0
-var x_mv=new Array();
-var crds=new Array();
-var lftrght=new Array();
-var browserinfos=navigator.userAgent
-var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
-var ns6=document.getElementById&&!document.all
-var opera=browserinfos.match(/Opera/)
-var browserok=ie5||ns6||opera
- 
-function randommaker(range) {
-    rand=Math.floor(range*Math.random())
-    return rand
-}
- 
-function initsnow() {
-    if (ie5 || opera) {
-        marginbottom = document.documentElement.clientHeight+50
-        marginright = document.body.clientWidth-15
+    ///////// Настройки
+    ////////////////////////
+     
+    // количество снежинок, которое будет на экране одновременно.
+    var snowmax=40
+     
+    // Цвета для снежинок. Для каждой конкретной снежинки цвет выбирается случайно из этого массива.
+    var snowcolor=new Array("#b9dff5","#7fc7ff","#7fb1ff","#7fc7ff","#b9dff5")
+     
+    // Шрифт для снежинок
+    var snowtype=new Array("Times")
+     
+    // Символ (*) и есть снежинка, в место нее можно вставить любой другой символ.
+    var snowletter="&#10052;"
+     
+    // Скорость движения снежинок (от 0.3 до 2)
+    var sinkspeed=0.4
+     
+    // Максимальный размер для снежинок
+    var snowmaxsize=40
+     
+    // Минимальный размер для снежинок
+    var snowminsize=10
+     
+    // Зона для снежинок
+    // 1 для всей страницы, 2 в левой части страницы
+    // 3 в центральной части, 4 в правой части страницы
+    var snowingzone=1
+     
+    ////////////////////////
+    ///////// Конец настроек
+    ////////////////////////
+     
+    var snow=new Array()
+    var marginbottom
+    var marginright
+    var timer
+    var i_snow=0
+    var x_mv=new Array();
+    var crds=new Array();
+    var lftrght=new Array();
+    var browserinfos=navigator.userAgent
+    var ie5=document.all&&document.getElementById&&!browserinfos.match(/Opera/)
+    var ns6=document.getElementById&&!document.all
+    var opera=browserinfos.match(/Opera/)
+    var browserok=ie5||ns6||opera
+     
+    function randommaker(range) {
+        rand=Math.floor(range*Math.random())
+        return rand
     }
-    else if (ns6) {
-        marginbottom = document.documentElement.clientHeight+50
-        marginright = window.innerWidth-15
-    }
-    var snowsizerange=snowmaxsize-snowminsize
-    for (i=0;i<=snowmax;i++) {
-        crds[i] = 0;
-        lftrght[i] = Math.random()*15;
-        x_mv[i] = 0.03 + Math.random()/10;
-        snow[i]=document.getElementById("s"+i)
-        snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
-        snow[i].size=randommaker(snowsizerange)+snowminsize
-        snow[i].style.fontSize=snow[i].size+'px';
-        snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
-        snow[i].style.zIndex=1000
-        snow[i].sink=sinkspeed*snow[i].size/5
-        if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
-        if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
-        if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
-        if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
-        snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
-        snow[i].style.left=snow[i].posx+'px';
-        snow[i].style.top=snow[i].posy+'px';
-    }
-    movesnow()
-}
- 
-function movesnow() {
-    for (i=0;i<=snowmax;i++) {
-        crds[i] += x_mv[i];
-        snow[i].posy+=snow[i].sink
-        snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i])+'px';
-        snow[i].style.top=snow[i].posy+'px';
-        
-        if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+     
+    function initsnow() {
+        if (ie5 || opera) {
+            marginbottom = document.documentElement.clientHeight+50
+            marginright = document.body.clientWidth-15
+        }
+        else if (ns6) {
+            marginbottom = document.documentElement.clientHeight+50
+            marginright = window.innerWidth-15
+        }
+        var snowsizerange=snowmaxsize-snowminsize
+        for (i=0;i<=snowmax;i++) {
+            crds[i] = 0;
+            lftrght[i] = Math.random()*15;
+            x_mv[i] = 0.03 + Math.random()/10;
+            snow[i]=document.getElementById("s"+i)
+            snow[i].style.fontFamily=snowtype[randommaker(snowtype.length)]
+            snow[i].size=randommaker(snowsizerange)+snowminsize
+            snow[i].style.fontSize=snow[i].size+'px';
+            snow[i].style.color=snowcolor[randommaker(snowcolor.length)]
+            snow[i].style.zIndex=1000
+            snow[i].sink=sinkspeed*snow[i].size/5
             if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
             if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
             if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
             if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
-            snow[i].posy=0
+            snow[i].posy=randommaker(2*marginbottom-marginbottom-2*snow[i].size)
+            snow[i].style.left=snow[i].posx+'px';
+            snow[i].style.top=snow[i].posy+'px';
         }
+        movesnow()
     }
-    var timer=setTimeout("movesnow()",50)
-}
- 
-for (i=0;i<=snowmax;i++) {
-    document.body.insertAdjacentHTML('beforeend', "<span id='s"+i+"' style='user-select:none;position:fixed;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
-}
- 
-if (browserok) {
-    window.onload=initsnow    
-}
-</script>
+     
+    function movesnow() {
+        for (i=0;i<=snowmax;i++) {
+            crds[i] += x_mv[i];
+            snow[i].posy+=snow[i].sink
+            snow[i].style.left=snow[i].posx+lftrght[i]*Math.sin(crds[i])+'px';
+            snow[i].style.top=snow[i].posy+'px';
+            
+            if (snow[i].posy>=marginbottom-2*snow[i].size || parseInt(snow[i].style.left)>(marginright-3*lftrght[i])){
+                if (snowingzone==1) {snow[i].posx=randommaker(marginright-snow[i].size)}
+                if (snowingzone==2) {snow[i].posx=randommaker(marginright/2-snow[i].size)}
+                if (snowingzone==3) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/4}
+                if (snowingzone==4) {snow[i].posx=randommaker(marginright/2-snow[i].size)+marginright/2}
+                snow[i].posy=0
+            }
+        }
+        var timer=setTimeout("movesnow()",50)
+    }
+     
+    for (i=0;i<=snowmax;i++) {
+        document.body.insertAdjacentHTML('beforeend', "<span id='s"+i+"' style='user-select:none;position:fixed;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+    }
+     
+    if (browserok) {
+        window.onload=initsnow    
+    }
+    </script>
   </body>
 </html>
