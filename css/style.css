@@ -471,3 +471,8 @@ footer {
 .section-header {
   animation-delay: 5s;
 }
+.main-form-btn {
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
