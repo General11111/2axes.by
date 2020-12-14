@@ -465,11 +465,16 @@ footer {
   box-shadow: 0px 11px 20px 0px rgba(20, 20, 21, 0.07);
 }
 /* Animation */
-.h1 {
-  animation-delay: 2s;
-}
 .main-form-btn {
   animation-duration: 8s;
   animation-delay: 2s;
   animation-iteration-count: infinite;
+}
+@media (min-width: 0px) and (max-width: 480px) {
+  .main-text h1 {
+    font-size: 28px;
+  }
+  .section-header h2 {
+    font-size: 22px;
+  }
 }
